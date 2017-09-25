@@ -26,6 +26,13 @@ var theImages = document.querySelectorAll('.image-holder'),
         newSubImg.classList.add('thumb');
         //set the src
         newSubImg.src = "images/" + objectIndex.images[index];
+
+        newSubImg.dataset.index = index; //custom data attribute
+
+        //add an event handler to trigger a lightbox
+        newSubImg.addEventListener('click', popLightBox, false);
+
+
         //add it to the page
         subImages.appendChild(newSubImg);
       })
@@ -51,7 +58,15 @@ var theImages = document.querySelectorAll('.image-holder'),
       image.addEventListener('click', changeElements, false);
     });
 
+    // trigger the lightbox
+    function popLightBox() {
+      //debugger;
+      //trigger the lightbox overlay so that we can see it!
+      let lightbox = document.querySelector('.lightbox');
 
+      lightbox.style.display = 'block';
+
+    }
     //document.querySelector('#spring').click(); //making spring fire teh first thing when you come to the page, not the best way
 
     changeElements.call(document.querySelector('#spring'));
