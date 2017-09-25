@@ -51,4 +51,8 @@ var theImages = document.querySelectorAll('.image-holder'),
       image.addEventListener('click', changeElements, false);
     });
 
+
+    //document.querySelector('#spring').click(); //making spring fire teh first thing when you come to the page, not the best way
+
+    changeElements.call(document.querySelector('#spring'));
 }) ();
