@@ -65,5 +65,30 @@ section { margin-top: 15px; background-color: #FFF; }
 	height: 100%;
 	color: white;
 	background-color: rgba(0,0,0,0.85);
+	transition: transform 500ms ease-out;
+	-webkit-transition: -webkit-transform 500ms ease-out;
 
+}
+
+.close-lightbox {
+	float: right;
+	margin-right: 18px;
+	margin-top: 12px;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+.lightbox-img {
+	display: block;
+	margin: 0 auto;
+	border: 4px solid #fff;
+	border-radius: 5px;
+
+}
+
+.img-desc
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
 }
